@@ -1,80 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/style.css" />
-    <title>Bootstrap SCSS</title>
-  </head>
-  <body>
-    <h1>Bootstrap SCSS</h1>
-    <button type="button" class="btn btn-primary">Primary</button>
-    <button type="button" class="btn btn-secondary">Secondary</button>
-    <button type="button" class="btn btn-success">Success</button>
-    <button type="button" class="btn btn-danger">Danger</button>
-    <button type="button" class="btn btn-warning">Warning</button>
-    <button type="button" class="btn btn-info">Info</button>
-    <button type="button" class="btn btn-light">Light</button>
-    <button type="button" class="btn btn-dark">Dark</button>
-
-    <button type="button" class="btn btn-link">Link</button>
-    <div class="container text-center mt-4">
-      <div class="row">
-        <div class="col bg-primary">Column</div>
-        <div class="col-6 bg-secondary">Column</div>
-        <div class="col bg-light">Column</div>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kavárna Pajanda</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="#">Pajanda na Zámku</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#o-nas">O nás</a></li>
+          <li class="nav-item"><a class="nav-link" href="#nabidka">Nabídka</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kontakt">Kontakt</a></li>
+        </ul>
       </div>
     </div>
-
-    <div class="dropdown">
-      <button
-        class="btn btn-secondary dropdown-toggle"
-        type="button"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-      >
-        Dropdown button
-      </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-      </ul>
-    </div>
-
+  </nav>
+  <header class="py-5 text-center bg-light">
     <div class="container">
-      <form>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label"
-            >Email address</label
-          >
-          <input
-            type="email"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-          />
-          <div id="emailHelp" class="form-text">
-            We'll never share your email with anyone else.
+      <h1 class="display-4">Vítejte v kavárně Pajanda</h1>
+      <p class="lead">Posezení s vůní historie na Vlachobřezském zámku</p>
+      <a href="#nabidka" class="btn btn-primary btn-lg mt-3">Prohlédnout nabídku</a>
+    </div>
+  </header>
+
+  <section id="o-nas" class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h2>O naší kavárně</h2>
+          <p>Kavárna Pajanda je srdcem Vlachobřezského zámku, kde se snoubí vůně kávy s historií. Nabízíme poctivou kávu, domácí dezerty a útulné prostředí pro relaxaci i práci.</p>
+        </div>
+        <div class="col-md-6">
+          <img src="styles/images/Snímek obrazovky 2025-06-09 v 20.11.34.png" alt="Kavárna" class="img-fluid rounded-3 shadow max-width" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="nabidka" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Naše nabídka</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="styles/images/coffee.png" class="card-img-top" alt="Espresso">
+            <div class="card-body">
+              <h5 class="card-title">Espresso</h5>
+              <p class="card-text">Silná a aromatická káva pro opravdové milovníky.</p>
+              <a href="#" class="btn btn-primary">Objednat</a>
+            </div>
           </div>
         </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="styles/images/dezerty.png" class="card-img-top" alt="Dezerty">
+            <div class="card-body">
+              <h5 class="card-title">Domácí dezerty</h5>
+              <p class="card-text">Pečeme s láskou – každý den nové dobroty.</p>
+              <a href="#" class="btn btn-primary">Zobrazit více</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="styles/images/caj.png" class="card-img-top" alt="Čaj">
+            <div class="card-body">
+              <h5 class="card-title">Výběrové čaje</h5>
+              <p class="card-text">Zahřejte se šálkem kvalitního sypaného čaje.</p>
+              <a href="#" class="btn btn-primary">Zjistit více</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="kontakt" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Kontaktujte nás</h2>
+      <form class="mx-auto" style="max-width: 600px;">
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input
-            type="password"
-            class="form-control"
-            id="exampleInputPassword1"
-          />
+          <label for="name" class="form-label">Jméno</label>
+          <input type="text" class="form-control" id="name" required>
         </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-          <label class="form-check-label" for="exampleCheck1"
-            >Check me out</label
-          >
+        <div class="mb-3">
+          <label for="email" class="form-label">E-mail</label>
+          <input type="email" class="form-control" id="email" required>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="mb-3">
+          <label for="message" class="form-label">Zpráva</label>
+          <textarea class="form-control" id="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary custom-hover">Odeslat</button>
       </form>
     </div>
-    <script src="./bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+  </section>
+  <footer class="bg-primary text-white text-center py-3">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Kavárna Pajanda, Vlachobřezský zámek</p>
+    </div>
+  </footer>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

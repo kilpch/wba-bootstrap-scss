@@ -1,7 +1,16 @@
-$primary: #ff4000;
-$secondary: #00ff40;
-$success: #00ffff;
 
-$border-radius: 0rem;
+$primary: #000000; // barva jako káva
+$body-bg: #e6890f;
+$font-family-sans-serif: 'Segoe UI', sans-serif;
 
-@import "../bootstrap/scss/bootstrap.scss";
+@import "bootstrap";
+.btn.custom-hover:hover {
+  background-color: darken($primary, 10%);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+.shadow-card {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 0.75rem;
+}
